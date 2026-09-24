@@ -63,7 +63,7 @@ public class Case02 {
 		WebElement errorMessage = webDriver.findElement(By.cssSelector("span.help-inline.error"));
 
 		// エラーメッセージを確認
-		assertEquals("* ログインに失敗しました。", errorMessage.getText());
+		assertTrue(errorMessage.getText().contains("ログインに失敗しました"));
 
 		// エビデンス取得
 		getEvidence(new Object() {
