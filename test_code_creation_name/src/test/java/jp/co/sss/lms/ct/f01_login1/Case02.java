@@ -38,10 +38,11 @@ public class Case02 {
 	@Order(1)
 	@DisplayName("テスト01 トップページURLでアクセス")
 	void test01() {
+		// トップページへアクセス
 		goTo("http://localhost:8080/lms/");
-
+		// ログイン画面が表示されていることを確認
 		assertEquals("ログイン", webDriver.findElement(By.tagName("h2")).getText());
-
+		// エビデンス取得
 		getEvidence(new Object() {
 		});
 	}
